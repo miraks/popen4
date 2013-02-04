@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'rubygems/user_interaction'
 require 'rake/testtask'
-require 'rake/rdoctask'
+require 'rdoc/task'
 
 task :default => [:test]
 
@@ -38,7 +38,6 @@ begin
     gemspec.email = "john-mason@shackelford.org"
     gemspec.homepage = "http://github.com/pka/popen4"
     gemspec.authors = ["John-Mason P. Shackelford"]
-    gemspec.add_dependency("Platform",   ">= 0.4.0")
     gemspec.platform = 'x86-mswin32'
     gemspec.add_dependency("win32-open3")
   end
@@ -50,7 +49,6 @@ begin
     gemspec.email = "john-mason@shackelford.org"
     gemspec.homepage = "http://github.com/pka/popen4"
     gemspec.authors = ["John-Mason P. Shackelford"]
-    gemspec.add_dependency("Platform",   ">= 0.4.0")
     gemspec.add_dependency("open4", ">= 0.4.0")
   end
 rescue LoadError

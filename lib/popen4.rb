@@ -1,10 +1,9 @@
 require 'rubygems'
-require 'platform'
 
-case Platform::OS
+case RUBY_PLATFORM
 
 # win32/popen4 yields stdin, stdout, stderr and pid, respectively
-when :win32
+when /win|mingw/
 
   require 'win32/open3'
 

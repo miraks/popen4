@@ -3,12 +3,10 @@ $: << File.join( File.dirname( __FILE__ ), '../lib/')
 require 'test/unit'
 require 'popen4'
 
-require 'platform'
-
 class POpen4Test < Test::Unit::TestCase
 
-  case Platform::OS
-    when :win32
+  case RUBY_PLATFORM
+    when /win|mingw/
       CMD_SHELL     = "cmd"
       CMD_STDERR    = "ruby -e \"$stderr.puts 'ruby'\""
       CMD_EXIT      = "ruby -e \"$stdout.puts 'ruby'; exit 1\""
