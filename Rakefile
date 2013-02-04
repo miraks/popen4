@@ -31,16 +31,16 @@ rd = Rake::RDocTask.new("rdoc") { |rdoc|
 begin
   require 'jeweler'
   # Windows
-  Jeweler::Tasks.new do |gemspec|
-    gemspec.name = "POpen4"
-    gemspec.summary = "Open4 cross-platform"
-    gemspec.description = ""
-    gemspec.email = "john-mason@shackelford.org"
-    gemspec.homepage = "http://github.com/pka/popen4"
-    gemspec.authors = ["John-Mason P. Shackelford"]
-    gemspec.platform = 'x86-mswin32'
-    gemspec.add_dependency("win32-open3")
-  end
+  # Jeweler::Tasks.new do |gemspec|
+  #   gemspec.name = "POpen4"
+  #   gemspec.summary = "Open4 cross-platform"
+  #   gemspec.description = ""
+  #   gemspec.email = "john-mason@shackelford.org"
+  #   gemspec.homepage = "http://github.com/pka/popen4"
+  #   gemspec.authors = ["John-Mason P. Shackelford"]
+  #   gemspec.platform = 'x86-mswin32'
+  #   gemspec.add_dependency("win32-open3")
+  # end
   # Unix
   Jeweler::Tasks.new do |gemspec|
     gemspec.name = "POpen4"
